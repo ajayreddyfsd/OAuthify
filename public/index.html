@@ -10,3 +10,39 @@
     <a href="/auth/logout">Sign out</a>
   </body>
 </html>
+
+<!--! Working explained -->
+<!--! Working explained -->
+<!--! Working explained -->
+<!--! Working explained -->
+<!-- 
+1st Link:
+- User clicks the <a> link
+- URL changes, which triggers the route in the code
+- The route calls checkLoggedIn()
+- If logged in → show the secret
+- If not logged in → send 401 error
+-->
+
+<!-- 
+2nd Link:
+- User clicks the <a> link
+- URL changes, which triggers the route
+- passport.authenticate() runs
+  Part 1:
+    → Google sign-in page opens
+    → User logs in and grants permission to share data
+    → End of part 1
+  Part 2:
+    → verifyCallback executes
+    → User data is stored and printed to console
+    → A cookie is created and the user ID is serialized into it
+-->
+
+<!-- 
+3rd Link:
+- User clicks the <a> link
+- URL changes, which triggers the route
+- passport’s built-in logout() runs
+- This clears the cookie and also logs the user out
+-->
